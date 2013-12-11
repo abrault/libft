@@ -1,22 +1,25 @@
 #include "libft.h"
 
-int	getCommand(int argc, char **argv, char *option)
+int	getCommand(int argc, char **argv, char **option)
 {
 	if (argc == 1)
 		return (1);
 	if (argc > 1)
 	{
-		if (verifstr(argc, argv, option) == 0)
+		if (verifstr(argc, argv, &option) == 0)
 			return (0);
 	}
 	return (1);
 }
 
-int	verifstr(int argc, char **argv, char *option)
+int	verifstr(int argc, char **argv, char ***option)
 {
 	int	y;
 	int	j;
+	char	*str;
 
+	str = malloc(sizeof(char) * ft_strlen(**option));
+	ft_strcpy(str, **option);
 	j = 1;
 	y = 1;
 	while (y < argc)
@@ -26,8 +29,9 @@ int	verifstr(int argc, char **argv, char *option)
 			return (0);
 		while (argv[y][j] != '\0')
 		{
-			if (ft_strchr(option, argv[y][j]) == NULL)
+			if (ft_strchr(str, argv[y][j]) == NULL)
 				return (0);
+			**option[ft_strlen(str) - ft_strlen(ft_strchr(str, argv[y][j]))] = '_';
 			j++;
 		}
 		y++;

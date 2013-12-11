@@ -69,8 +69,8 @@ char		*ft_strstr(const char *str_1, const char *str_2);
 size_t		ft_strlcat(char *dest, const char *src, size_t n);
 
 /* Gestion des commandes entree standard */
-int		verifstr(int argc, char **argv, char *option);
-int		getCommand(int argc, char **argv, char *option);
+int		verifstr(int argc, char **argv, char ***option);
+int		getCommand(int argc, char **argv, char **option);
 
 /* Fonction propre a mlx */
 
