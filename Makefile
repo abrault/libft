@@ -6,7 +6,7 @@
 #    By: abrault <abrault@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/22 15:06:42 by abrault           #+#    #+#              #
-#    Updated: 2013/11/26 17:00:06 by abrault          ###   ########.fr        #
+#    Updated: 2013/12/22 13:19:46 by abrault          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -98,8 +98,5 @@ clean:
 
 fclean:
 	/bin/rm -f $(NAME)
-
-main:
-	gcc main.c -L. -lft
 
 re: fclean all
