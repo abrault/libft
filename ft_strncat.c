@@ -14,8 +14,8 @@
 
 char	*ft_strncat(char *dest, const char *src, size_t n)
 {
-	size_t		i;
-	int		a;
+	size_t	i;
+	int	a;
 
 	i = 0;
 	a = 0;
@@ -25,7 +25,7 @@ char	*ft_strncat(char *dest, const char *src, size_t n)
 		a++;
 	while (src[i] != '\0' && i < n)
 	{
-        	dest[a + i] = src[i];
+		dest[a + i] = src[i];
 		i++;
 	}
 	dest[a + i] = '\0';
