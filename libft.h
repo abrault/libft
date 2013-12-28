@@ -21,12 +21,6 @@
 # include <sys/types.h>
 # include <sys/uio.h>
 
-# include <X11/Xlib.h>
-# include <X11/Xutil.h>
-# include <X11/Xos.h>
-# include <X11/Xatom.h>
-# include <X11/keysym.h>
-
 # define BUFF_SIZE 100
 # define MIN(a,b) (a < b ? a : b)
 
@@ -65,17 +59,13 @@ char		*ft_strncpy(char *desti, const char *source, size_t size);
 char		*ft_strnstr(const char *str_1, const char *str_2, size_t n);
 char		*ft_strrchr(const char *str, int c_ascii);
 char		*ft_strstr(const char *str_1, const char *str_2);
+char		*ft_strtok(char *str, char sepa);
 
 size_t		ft_strlcat(char *dest, const char *src, size_t n);
 
 /* Gestion des commandes entree standard */
 int		verifstr(int argc, char **argv, char ***option);
 int		getCommand(int argc, char **argv, char **option);
-
-/* Fonction propre a mlx */
-
-void    	mlx_CreateWindow(Display **dis, Window *win, int h, int w);
-GC		mlx_getColor(Display *dis, Window win, char *color);
 
 /* Fonction gestion de fichier */
 

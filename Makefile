@@ -44,10 +44,10 @@ SRC = ft_atoi.c \
 	  ft_putchar.c \
 	  ft_putstr.c \
 	  ft_putendl.c \
-	  mlx.c \
 	  get_next_line.c \
 	  ft_getTab2.c \
-	  getCommand.c
+	  getCommand.c \
+	  ft_strtok.c
 
 SRC_O = ft_atoi.o \
 	 ft_bzero.o \
@@ -81,15 +81,15 @@ SRC_O = ft_atoi.o \
 	 ft_putchar.o \
 	 ft_putstr.o \
 	 ft_putendl.o \
-	 mlx.o \
 	 get_next_line.o \
 	 ft_getTab2.o \
-	 getCommand.o
+	 getCommand.o \
+	 ft_strtok.o
 
 all: $(NAME)
 
 $(NAME):
-	gcc -c $(SRC) -I/usr/X11R6/include
+	gcc -c $(SRC)
 	ar rc $(NAME) $(SRC_O)
 	ranlib $(NAME)
 
